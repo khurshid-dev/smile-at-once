@@ -122,9 +122,9 @@ body {
     width: 326px;
     height: auto;
     border-radius: 19px;
-    top: 0;
+    top: -7px;
     right: 14px;
-    background-color: #000000d4;
+    background-image: linear-gradient(to top, #cc208eb8 0%, #6713d2f0 100%);
     color: white;
     z-index: 1;
     transition: all 0.4s ease;
@@ -187,6 +187,7 @@ body {
     display: flex;
     width: 28px;
     height: 3px;
+    border-radius: 32px;
     background: #ffffff;
     transition: 0.3s all ease;
 }
@@ -324,37 +325,35 @@ section.main {
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
-    font-size: 15px;
+    font-size: 20px;
     background: white;
     font-weight: 600;
-    padding: 7px 12px 7px 12px;
+    padding: 8px 11px 8px 13px;
     color: blue;
     border-radius: 50%;
     text-transform: none !important;
     letter-spacing: 0;
     font-variant: initial;
     line-height: 1;
-    box-shadow: 6px 8px 23px 0px rgb(176 176 195 / 80%);
 }
 
 
 
 .swiper-pagination-bullet {
-    background: white;
-}
-
-.swiper-pagination-bullet {
-    width: 24px;
-    height: 3px;
+    width: 15px;
+    border-radius: 50%;
+    height: 15px;
     display: inline-block;
-    border-radius: inherit;
     background: #fff;
-    opacity: var(--swiper-pagination-bullet-inactive-opacity, .4);
+    opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
 }
 
 .swiper-pagination-bullet-active {
     opacity: var(--swiper-pagination-bullet-opacity, 1);
-    background: black;
+    background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+    width: 40px;
+    border-radius: 10px;
+    height: 15px;
 }
 
 .swiper-button-next,
