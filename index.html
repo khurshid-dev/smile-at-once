@@ -8,6 +8,11 @@
     <link rel="icon" href="img/favicon.png" type="image/png" />
     <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
     <title>smile-at-once</title>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -55,19 +60,11 @@
 
 
     <section class="main">
-
-    </section>
-    <div class="container">
-
-    </div>
-
-
-    <section class="main">
         <div class="container">
             <div class="main-box">
-                <div class="carousel">
-                    <div class="carousel-wrap">
-                        <div class="carousel-cell">
+                <div class="swiper main-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
                             <div class="slider-info">
                                 <h1>Имплант Osstem + <br> циркониевая коронка под <br> ключ</h1>
                                 <p>срок службы более 20 лет</p>
@@ -79,7 +76,7 @@
                             </div>
                             <div class="box-img"><img src="img/slider-bg-img.png" alt=""></div>
                         </div>
-                        <div class="carousel-cell">
+                        <div class="swiper-slide">
                             <div class="slider-info">
                                 <h1>Имплант Osstem + <br> циркониевая коронка под <br> ключ</h1>
                                 <p>срок службы более 20 лет</p>
@@ -89,9 +86,9 @@
                                 </div>
                                 <div class="btn-slider-two">Подробнее</div>
                             </div>
-                            <div class="box-img"><img src="img/slider-bg-img-2.png" alt=""></div>
+                            <div class="box-img two"><img src="img/slider-bg-img-2.png" alt=""></div>
                         </div>
-                        <div class="carousel-cell">
+                        <div class="swiper-slide">
                             <div class="slider-info">
                                 <h1>Имплант Osstem + <br> циркониевая коронка под <br> ключ</h1>
                                 <p>срок службы более 20 лет</p>
@@ -101,19 +98,33 @@
                                 </div>
                                 <div class="btn-slider-two">Подробнее</div>
                             </div>
-                            <div class="box-img"><img src="img/slider-bg-img-3.png" alt=""></div>
+                            <div class="box-img three"><img src="img/slider-bg-img-3.png" alt=""></div>
                         </div>
                     </div>
-                    <div class="swiper-pagination">
-                        <ion-icon name="arrow-back-circle-outline"></ion-icon>
-                        <ion-icon name="arrow-back-circle-outline"></ion-icon>
-                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
                 <div class="main-items">
-                    <div class="item">
-                        <h4></h4>
-                        <div><img src="" alt=""></div>
-                        <div class="btn-main"><a href="#"></a></div>
+                    <div class="item one">
+                        <h4>Имплантология</h4>
+                        <div><img src="img/dental-img1.svg" alt=""></div>
+                        <div class="btn-main"><a href="#">К услуге</a></div>
+                    </div>
+                    <div class="item two">
+                        <h4>Протезирована</h4>
+                        <div><img src="img/dental-img2.svg" alt=""></div>
+                        <div class="btn-main"><a href="#">К услуге</a></div>
+                    </div>
+                    <div class="item three">
+                        <h4>Детская</h4>
+                        <div><img src="img/dental-img3.svg" alt=""></div>
+                        <div class="btn-main"><a href="#">К услуге</a></div>
+                    </div>
+                    <div class="item four">
+                        <h4>Ортодонтия</h4>
+                        <div><img src="img/dental-img4.svg" alt=""></div>
+                        <div class="btn-main"><a href="#">К услуге</a></div>
                     </div>
                 </div>
             </div>
@@ -126,7 +137,7 @@
 
 
     <!-- JS file -->
-    <link rel="stylesheet" href="js/script.js">
+    <script src="js/script.js"></script>
 </body>
 
 </html>
