@@ -284,6 +284,11 @@ section.main {
     cursor: pointer;
 }
 
+.btn-slider:hover {
+    background: rgb(0, 0, 0);
+    color: rgb(251, 255, 0);
+}
+
 .btn-slider-two {
     font-size: 20px;
     font-weight: 500;
@@ -296,6 +301,10 @@ section.main {
     margin-bottom: 22px;
 }
 
+.btn-slider-two:hover {
+    background: white;
+    color: rgb(136, 0, 139);
+}
 
 .box-img {
     position: absolute;
