@@ -1,3 +1,9 @@
+:root {
+    --main: rgb(0 255 20);
+    --primaryary: #EBFFFA;
+    --secondary: #EBFFFA;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +21,7 @@ body {
     transition: all .4s;
     font-size: 14px;
     color: #000;
-
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .container {
@@ -27,7 +33,11 @@ body {
 }
 
 .header {
-    padding: 30px 0;
+    padding: 20px 0;
+    background: #000;
+    -webkit-box-shadow: -2px 8px 7px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: -2px 8px 7px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: -2px 8px 7px 1px rgba(0, 0, 0, 0.2);
 }
 
 .header-box {
@@ -47,15 +57,16 @@ body {
 }
 
 .social-icons ion-icon {
-    font-size: 22px;
+    font-size: 20px;
     margin-left: 15px;
-    color: rgb(54, 141, 255);
+    border: 1px solid yellow;
+    padding: 7px;
+    border-radius: 50%;
+    color: yellow;
     cursor: pointer;
-    margin-right: px;
 }
 
 .social-icons ion-icon:hover {
-    color: #0058dd;
     transform: translateY(-6px);
     transition: all 0.4s ease;
 }
@@ -64,25 +75,23 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
-    color: white;
+    color: black;
     font-size: 14px;
-    background: rgb(0 93 255);
-    background: linear-gradient(336deg, rgb(0 93 255) 0%, rgb(28 97 223) 19%, rgb(0, 212, 255) 100%);
-    padding: 8px 14px;
+    padding: 9px 16px;
     cursor: pointer;
     border-radius: 10px;
+    background: white;
     margin-left: 15px;
     font-weight: 600;
     border: 1px solid #fff;
+    transition: .4s;
 }
 
 .call-btn:hover {
     border: 1px solid rgb(4, 0, 79);
-    background: rgb(4, 0, 79);
-    background: linear-gradient(336deg, rgba(4, 0, 79, 1) 0%, rgba(9, 9, 121, 1) 19%, rgba(0, 212, 255, 1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: rgb(0 93 255);
+    background: yellow;
+    color: black;
+    transform: scale(0.9);
 }
 
 .call-btn ion-icon {
@@ -107,40 +116,140 @@ body {
 
 
 
-.menu-section {
-    border-top: 1px solid rgb(54, 141, 255);
-    border-bottom: 1px solid rgb(54, 141, 255);
-    padding-top: 5px;
-    padding-bottom: 5px;
+/* Burger Menu List */
+.burger-menu-list {
+    position: absolute;
+    width: 326px;
+    height: auto;
+    border-radius: 19px;
+    top: 0;
+    right: 14px;
+    background-color: #000000d4;
+    color: white;
+    z-index: 1;
+    transition: all 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
 }
 
-.menu-items {
+.burger-menu-list ul {
+    padding: 45px;
+}
+
+.burger-menu-list ul li {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    /* margin: 40px 0 11px; */
+    margin-bottom: 5px;
 }
 
-.menu-items li {
-    list-style-type: none;
-}
-
-.menu-items li a {
-    font-size: 15px;
+.burger-menu-list ul li a {
+    color: white;
+    font-size: 18px;
+    text-align: left;
     text-decoration: none;
-    display: block;
-    padding: 9px 25px;
     font-weight: 600;
-    border-radius: 6px;
-    color: #000;
+    padding: 6px;
     transition: .4s;
 }
 
-.menu-items li a:hover {
-    background: rgb(0 93 255);
-    background: linear-gradient(336deg, rgb(0 93 255) 0%, rgb(28 97 223) 19%, rgb(0, 212, 255) 100%);
-    color: white;
+.burger-menu-list li a:hover {
+    color: rgb(0, 0, 0);
+    background: #efff00;
+    border-radius: 14px;
 }
 
+.burger-menu-list.active {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 2;
+}
+
+
+
+
+
+
+/* Burger Styles */
+.burger {
+    height: 20px;
+    width: 30px;
+    position: relative;
+    right: 12px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    display: block;
+    z-index: 2;
+}
+
+.burger-line {
+    display: flex;
+    width: 28px;
+    height: 3px;
+    background: #ffffff;
+    transition: 0.3s all ease;
+}
+
+.top-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.mid-line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.bottom-line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.burger.active::after {
+    background-color: rgb(255, 255, 255);
+    padding: 19px;
+    border-radius: 50%;
+    display: block;
+    content: "";
+    position: absolute;
+    top: -11px;
+    right: 0px;
+    z-index: -1;
+}
+
+.burger.active>.burger-line {
+    display: flex;
+    width: 23px;
+    height: 3px;
+    background: #ffffff;
+    transition: 0.3s all ease;
+}
+
+.burger.active>.top-line {
+    transform: translateY(8px) rotate(405deg);
+    transition: 1s all ease;
+    background: rgb(0, 0, 0);
+}
+
+.burger.active>.mid-line {
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.burger.active>.bottom-line {
+    transform: translateY(-10px) rotate(-405deg);
+    transition: 1s all ease;
+    background: rgb(0, 0, 0);
+}
 
 
 
@@ -165,6 +274,7 @@ section.main {
 .swiper {
     width: 750px;
     height: auto;
+    z-index: 1;
 }
 
 .main-swiper .swiper-slide {
@@ -174,8 +284,7 @@ section.main {
     border-radius: 20px;
     padding: 22px 41px;
     color: white;
-    background: rgb(0, 206, 255);
-    background: linear-gradient(146deg, rgba(0, 206, 255, 1) 37%, rgba(23, 42, 116, 1) 100%);
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -190,6 +299,15 @@ section.main {
     -webkit-align-items: start;
     align-items: start;
     text-align: start;
+    cursor: pointer;
+}
+
+.main-swiper .swiper-slide.two {
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+}
+
+.main-swiper .swiper-slide.three {
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
 }
 
 .main-swiper .swiper-slide img {
@@ -216,6 +334,7 @@ section.main {
     letter-spacing: 0;
     font-variant: initial;
     line-height: 1;
+    box-shadow: 6px 8px 23px 0px rgb(176 176 195 / 80%);
 }
 
 
@@ -235,7 +354,7 @@ section.main {
 
 .swiper-pagination-bullet-active {
     opacity: var(--swiper-pagination-bullet-opacity, 1);
-    background: white;
+    background: black;
 }
 
 .swiper-button-next,
